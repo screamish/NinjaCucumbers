@@ -1,3 +1,6 @@
+$:.unshift(File.dirname(__FILE__) + '/../../src')
+require 'ninja'
+
   Given /^the ninja has a ([a-z]*) level black\-belt$/ do |belt_level|
     @ninja=Ninja.new belt_level
   end
