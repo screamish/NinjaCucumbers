@@ -2,19 +2,11 @@
     @ninja=Ninja.new belt_level
   end
   
-  When "attacked by a samurai" do
-    pending
+  When /^attacked by [a\s]*(.*)$/ do |opponent|
+    @actions=@ninja.attacked_by(opponent)
   end
   
-  When "attacked by Chuck Norris" do
-    pending
-  end
-  
-  Then "the ninja should engage the opponent" do
-    pending
-  end
-  
-  Then "the ninja should run for his life" do
-    pending
+  Then /the ninja should (.*)$/ do |expected_action|
+    @actions.should include expected_action
   end
   
