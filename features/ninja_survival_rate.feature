@@ -13,3 +13,11 @@ Scenario Outline: third-level ninjas engage samurai
 	|third		|a samurai		|engage the opponent	|
 	|third		|Chuck Norris	|run for his life		|
 	|second		|a samurai		|run for his life		|
+
+Scenario: Full armed
+	Given a ninja with the following experience
+	|belt_level	|katana	|sake	|fought		|magic	|
+	|third		|two	|three	|samurai	|five	|
+	When attacked by a samurai
+	Then the ninja should engage the opponent
+	

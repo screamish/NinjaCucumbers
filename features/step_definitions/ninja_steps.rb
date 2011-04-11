@@ -13,3 +13,6 @@ require 'ninja'
     @actions.should include expected_action
   end
   
+  Given /^a ninja with the following experience$/ do |table|
+    @ninja=Ninja.new table.hashes.first["belt_level"]
+  end
