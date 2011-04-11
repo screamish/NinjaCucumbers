@@ -5,10 +5,13 @@ class Ninja
   end
   
   def attacked_by (opponent)
+    if(@belt) != "third"
+      return ["run for his life"]
+    end
     if(opponent=="Chuck Norris")
-      ["run for his life"]
+      return ["run for his life"]
     else
-      ["engage the opponent"]
+      return ["engage the opponent"]
     end
   end
   
